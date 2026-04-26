@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <title>Convertify</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     * {
       margin: 0;
@@ -20,21 +21,43 @@
     header {
       display: flex;
       justify-content: space-between;
-      padding: 20px 40px;
+      align-items: center;
+      padding: 20px 60px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #aaa;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .actions {
+      display: flex;
+      gap: 15px;
       align-items: center;
     }
 
-    header nav a {
-      margin: 0 15px;
-      color: #aaa;
+    .login {
+      color: #00ff88;
       text-decoration: none;
+      font-weight: bold;
     }
 
-    .btn {
+    .cta {
       background: #00ff88;
+      color: #000;
       padding: 10px 20px;
       border-radius: 8px;
-      color: black;
       font-weight: bold;
       text-decoration: none;
     }
@@ -45,17 +68,27 @@
     }
 
     .hero h1 {
-      font-size: 48px;
+      font-size: 42px;
       margin-bottom: 20px;
     }
 
-    .hero span {
+    .highlight {
       color: #00ff88;
     }
 
     .hero p {
       color: #aaa;
       margin-bottom: 30px;
+    }
+
+    .btn-main {
+      background: #00ff88;
+      color: #000;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
     }
 
     .stats {
@@ -65,7 +98,7 @@
       margin-top: 40px;
     }
 
-    .box {
+    .stat {
       border: 1px solid #222;
       padding: 15px 25px;
       border-radius: 10px;
@@ -80,97 +113,102 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
       margin-top: 40px;
+      flex-wrap: wrap;
     }
 
     .card {
       border: 1px solid #222;
-      padding: 30px;
-      border-radius: 15px;
-      width: 280px;
-      text-align: left;
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #aaa;
+      padding: 25px;
+      border-radius: 12px;
+      width: 250px;
+      background: #111;
     }
 
     .pricing {
       display: flex;
       justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
       margin-top: 40px;
+      flex-wrap: wrap;
     }
 
-    .price-card {
+    .plan {
+      background: #111;
       border: 1px solid #222;
       padding: 30px;
-      border-radius: 15px;
-      width: 280px;
+      border-radius: 12px;
+      width: 260px;
     }
 
-    .price-card h2 {
+    .plan.highlight {
+      border: 2px solid #00ff88;
+    }
+
+    .plan h2 {
       margin-bottom: 10px;
     }
 
     .price {
-      font-size: 32px;
       color: #00ff88;
+      font-size: 26px;
       margin: 10px 0;
     }
 
-    .highlight {
-      border: 2px solid #00ff88;
-      background: #022d1a;
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #00ff88;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .price-card ul {
-      list-style: none;
-      margin: 15px 0;
-    }
-
-    .price-card ul li {
-      margin: 8px 0;
+    .testimonials {
+      max-width: 800px;
+      margin: auto;
+      margin-top: 40px;
       color: #aaa;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      color: #666;
+      color: #555;
+      margin-top: 60px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h2>Convertify</h2>
+  <div class="logo">Convertify</div>
+
   <nav>
     <a href="#">Como funciona</a>
     <a href="#">Exemplo</a>
     <a href="#">Planos</a>
   </nav>
-  <div>
-    <a href="#">Entrar</a>
-    <a class="btn" href="#">Começar</a>
+
+  <div class="actions">
+    <a href="#" class="login">Entrar</a>
+    <a href="#" class="cta">Começar</a>
   </div>
 </header>
 
 <section class="hero">
-  <h1>Crie páginas de vendas que <span>realmente vendem</span></h1>
-  <p>Gere páginas profissionais em segundos e comece a vender hoje.</p>
-  <a class="btn" href="#">Começar agora</a>
+  <h1>Crie páginas que <span class="highlight">realmente vendem</span></h1>
+  <p>Gere páginas profissionais com inteligência artificial em segundos e aumente suas vendas.</p>
+
+  <a href="#" class="btn-main">Começar agora</a>
 
   <div class="stats">
-    <div class="box">12.847 páginas criadas</div>
-    <div class="box">3.219 usuários ativos</div>
-    <div class="box">27.593 vendas geradas</div>
+    <div class="stat">12.847 páginas criadas</div>
+    <div class="stat">3.219 usuários ativos</div>
+    <div class="stat">27.593 vendas geradas</div>
   </div>
 </section>
 
@@ -180,67 +218,76 @@
   <div class="cards">
     <div class="card">
       <h3>1. Descreva</h3>
-      <p>Fale sobre seu produto</p>
+      <p>Fale sobre seu produto ou serviço.</p>
     </div>
 
     <div class="card">
       <h3>2. Gere</h3>
-      <p>A IA cria tudo pra você</p>
+      <p>A IA cria toda a página automaticamente.</p>
     </div>
 
     <div class="card">
       <h3>3. Venda</h3>
-      <p>Publique e comece a faturar</p>
+      <p>Publique e comece a faturar.</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <h2>Planos para cada fase</h2>
+  <h2>O que você recebe</h2>
+
+  <div class="cards">
+    <div class="card">✔ Copy profissional</div>
+    <div class="card">✔ Design moderno</div>
+    <div class="card">✔ Estrutura de alta conversão</div>
+    <div class="card">✔ Pronto para vender</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Planos</h2>
 
   <div class="pricing">
 
-    <div class="price-card">
-      <h3>Starter</h3>
+    <div class="plan">
+      <h2>Starter</h2>
       <div class="price">R$29,90/mês</div>
-      <ul>
-        <li>Até 10 páginas</li>
-        <li>Templates básicos</li>
-        <li>Link público</li>
-        <li>Suporte por e-mail</li>
-      </ul>
-      <a class="btn" href="#">Escolher</a>
+      <p>Até 10 páginas</p>
+      <p>Templates básicos</p>
+      <a href="#" class="btn">Escolher</a>
     </div>
 
-    <div class="price-card highlight">
-      <h3>Pro</h3>
+    <div class="plan highlight">
+      <h2>Pro</h2>
       <div class="price">R$59,90/mês</div>
-      <ul>
-        <li>Até 25 páginas</li>
-        <li>Templates premium</li>
-        <li>IA + Copy automática</li>
-        <li>Mais velocidade</li>
-      </ul>
-      <a class="btn" href="#">Mais escolhido</a>
+      <p>Até 25 páginas</p>
+      <p>IA + Copy automática</p>
+      <a href="#" class="btn">Mais escolhido</a>
     </div>
 
-    <div class="price-card">
-      <h3>Scale</h3>
+    <div class="plan">
+      <h2>Scale</h2>
       <div class="price">R$97,90/mês</div>
-      <ul>
-        <li>Até 60 páginas</li>
-        <li>Prioridade</li>
-        <li>Estruturas avançadas</li>
-        <li>Suporte dedicado</li>
-      </ul>
-      <a class="btn" href="#">Escolher</a>
+      <p>Até 60 páginas</p>
+      <p>Suporte dedicado</p>
+      <a href="#" class="btn">Escolher</a>
     </div>
 
   </div>
 </section>
 
+<section class="section">
+  <h2>O que nossos usuários dizem</h2>
+
+  <div class="testimonials">
+    <p>"Em 1 dia já fiz minha primeira venda. Simplesmente absurdo."</p>
+    <br>
+    <p>"Nunca consegui fazer página, agora faço em minutos."</p>
+  </div>
+</section>
+
 <footer>
-  © 2026 Convertify — Termos • Privacidade • Contato
+  © 2026 Convertify - Todos os direitos reservados
 </footer>
 
 </body>
