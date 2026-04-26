@@ -1,128 +1,183 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Convertify</title>
+  <meta charset="UTF-8">
+  <title>Convertify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-<style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#0b0b0b;
-  color:#fff;
-}
+    body {
+      background: #0b0b0b;
+      color: #fff;
+    }
 
-/* CONTAINER */
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:80px 20px;
-}
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      align-items: center;
+    }
 
-/* HERO */
-.hero{
-  text-align:center;
-}
+    header nav a {
+      margin: 0 15px;
+      color: #aaa;
+      text-decoration: none;
+    }
 
-.hero h1{
-  font-size:52px;
-  font-weight:bold;
-}
+    .btn {
+      background: #00ff88;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-.green{
-  color:#00ff88;
-}
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
 
-.hero p{
-  color:#aaa;
-  font-size:18px;
-  margin-top:10px;
-}
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
 
-.btn{
-  display:inline-block;
-  margin-top:25px;
-  padding:15px 30px;
-  background:#00ff88;
-  color:#000;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:bold;
-}
+    .hero span {
+      color: #00ff88;
+    }
 
-/* CARDS */
-.grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap:20px;
-  margin-top:50px;
-}
+    .hero p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
 
-.card{
-  background:#111;
-  padding:25px;
-  border-radius:15px;
-  border:1px solid #222;
-}
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
 
-/* PLANOS */
-.pricing{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-  gap:25px;
-  margin-top:40px;
-}
+    .box {
+      border: 1px solid #222;
+      padding: 15px 25px;
+      border-radius: 10px;
+    }
 
-.plan{
-  background:#111;
-  padding:30px;
-  border-radius:15px;
-  border:1px solid #222;
-  text-align:center;
-}
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-.plan.highlight{
-  border:2px solid #00ff88;
-  background:#0f1f17;
-}
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
 
-.price{
-  font-size:32px;
-  color:#00ff88;
-  margin:15px 0;
-}
+    .card {
+      border: 1px solid #222;
+      padding: 30px;
+      border-radius: 15px;
+      width: 280px;
+      text-align: left;
+    }
 
-/* FOOTER */
-.footer{
-  text-align:center;
-  padding:40px;
-  color:#666;
-}
-</style>
+    .card h3 {
+      margin-bottom: 10px;
+    }
 
+    .card p {
+      color: #aaa;
+    }
+
+    .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .price-card {
+      border: 1px solid #222;
+      padding: 30px;
+      border-radius: 15px;
+      width: 280px;
+    }
+
+    .price-card h2 {
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 32px;
+      color: #00ff88;
+      margin: 10px 0;
+    }
+
+    .highlight {
+      border: 2px solid #00ff88;
+      background: #022d1a;
+    }
+
+    .price-card ul {
+      list-style: none;
+      margin: 15px 0;
+    }
+
+    .price-card ul li {
+      margin: 8px 0;
+      color: #aaa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<div class="container hero">
-  <h1>Crie páginas que <span class="green">realmente vendem</span></h1>
-  <p>Gere páginas profissionais em segundos — sem design e sem complicação</p>
-
-  <a href="#" class="btn">Começar agora</a>
-
-  <div class="grid">
-    <div class="card">⚡ Ultra rápido</div>
-    <div class="card">📱 100% mobile</div>
-    <div class="card">💰 Focado em vendas</div>
+<header>
+  <h2>Convertify</h2>
+  <nav>
+    <a href="#">Como funciona</a>
+    <a href="#">Exemplo</a>
+    <a href="#">Planos</a>
+  </nav>
+  <div>
+    <a href="#">Entrar</a>
+    <a class="btn" href="#">Começar</a>
   </div>
-</div>
+</header>
 
-<!-- COMO FUNCIONA -->
-<div class="container">
-  <h2 style="text-align:center;">Como funciona</h2>
+<section class="hero">
+  <h1>Crie páginas de vendas que <span>realmente vendem</span></h1>
+  <p>Gere páginas profissionais em segundos e comece a vender hoje.</p>
+  <a class="btn" href="#">Começar agora</a>
 
-  <div class="grid">
+  <div class="stats">
+    <div class="box">12.847 páginas criadas</div>
+    <div class="box">3.219 usuários ativos</div>
+    <div class="box">27.593 vendas geradas</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Como funciona</h2>
+
+  <div class="cards">
     <div class="card">
       <h3>1. Descreva</h3>
       <p>Fale sobre seu produto</p>
@@ -138,51 +193,55 @@ body{
       <p>Publique e comece a faturar</p>
     </div>
   </div>
-</div>
+</section>
 
-<!-- PLANOS -->
-<div class="container">
-  <h2 style="text-align:center;">Planos</h2>
+<section class="section">
+  <h2>Planos para cada fase</h2>
 
   <div class="pricing">
 
-    <div class="plan">
+    <div class="price-card">
       <h3>Starter</h3>
-      <div class="price">R$29,90</div>
-      <p>Até 10 páginas</p>
-      <p>Templates básicos</p>
-      <a href="#" class="btn">Escolher</a>
+      <div class="price">R$29,90/mês</div>
+      <ul>
+        <li>Até 10 páginas</li>
+        <li>Templates básicos</li>
+        <li>Link público</li>
+        <li>Suporte por e-mail</li>
+      </ul>
+      <a class="btn" href="#">Escolher</a>
     </div>
 
-    <div class="plan highlight">
+    <div class="price-card highlight">
       <h3>Pro</h3>
-      <div class="price">R$79,90</div>
-      <p>Até 35 páginas</p>
-      <p>IA + Templates premium</p>
-      <a href="#" class="btn">Mais escolhido</a>
+      <div class="price">R$59,90/mês</div>
+      <ul>
+        <li>Até 25 páginas</li>
+        <li>Templates premium</li>
+        <li>IA + Copy automática</li>
+        <li>Mais velocidade</li>
+      </ul>
+      <a class="btn" href="#">Mais escolhido</a>
     </div>
 
-    <div class="plan">
+    <div class="price-card">
       <h3>Scale</h3>
-      <div class="price">R$147,90</div>
-      <p>Até 60 páginas</p>
-      <p>Suporte prioritário</p>
-      <a href="#" class="btn">Escolher</a>
+      <div class="price">R$97,90/mês</div>
+      <ul>
+        <li>Até 60 páginas</li>
+        <li>Prioridade</li>
+        <li>Estruturas avançadas</li>
+        <li>Suporte dedicado</li>
+      </ul>
+      <a class="btn" href="#">Escolher</a>
     </div>
 
   </div>
-</div>
+</section>
 
-<!-- PROVA SOCIAL -->
-<div class="container" style="text-align:center;">
-  <h2>Quem usa, recomenda</h2>
-  <p>⭐⭐⭐⭐⭐ "Criei minha página em minutos!"</p>
-  <p>⭐⭐⭐⭐⭐ "Muito fácil e vende mesmo!"</p>
-</div>
-
-<div class="footer">
-  © 2026 Convertify
-</div>
+<footer>
+  © 2026 Convertify — Termos • Privacidade • Contato
+</footer>
 
 </body>
 </html>
